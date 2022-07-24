@@ -1,4 +1,4 @@
-1. <strong> What is the main functionality of the browser? </strong>
+1.<strong> What is the main functionality of the browser? </strong>
 
 <p>The main function is to retrieve information from the World Wide Web and making it available for users <p>
 
@@ -16,12 +16,12 @@
 
 <p>After Html gets loaded browser renders DOM tree. Then it appropriate styling will get processed to contruct CSSOM tree.Once DOM tree and CSSOM tree are ready render tree will get constructed, then browser will start painting elements in the UI.</p>
 
-4. <strong> Parsers (HTML, CSS, etc) </strong>
+4.<strong> Parsers (HTML, CSS, etc) </strong>
 
 <p>Parsing means reading HTML content and constructing DOM tree.</p>
 <p>HTML parse will parse markup into the parse tree,CSS parser will tokenize the markup into token to will parse it to CSS rules which will helpful to create CSSOM tree.
 
-5. <strong> Order of script processing </strong>
+5.<strong> Order of script processing </strong>
 
 <p> Browser will first go through the markup code line by line, then it will decide whether sync/async script can be loaded to optimize performance of loading website.</p>
 <p>Style sheets will be loaded async, without waiting of that DOM tree will get constructed </p>
