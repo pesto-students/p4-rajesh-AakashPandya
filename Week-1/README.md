@@ -32,6 +32,6 @@
 <p> Appropriate position, size will be computed by layout </p>
 <p> In the painting phase, final rendering tree will be rendered into the screen with appropriate pixels.</p>
 
-Image: https://github.com/AakashPandya/p4-rajesh-AakashPandya/blob/apandya/week1/Week-1/PestoExercise1.1.drawio%20(1).png
+Diagrams: https://github.com/AakashPandya/p4-rajesh-AakashPandya/blob/apandya/week1/Week-1/PestoExercise1.1.drawio%20(1).png
 
 
