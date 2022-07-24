@@ -1,8 +1,8 @@
-a. <b> What is the main functionality of the browser? <b/>
+1. <strong> What is the main functionality of the browser? </strong>
 
 <p>The main function is to retrieve information from the World Wide Web and making it available for users <p>
 
-b.High Level Components of a browser.
+2.<strong> High Level Components of a browser. </strong>
 
 <p>
 1. User Interface (How user interact with browser)
@@ -12,21 +12,21 @@ b.High Level Components of a browser.
 5. Javascript Interpreter (Parsing and executing Javascript code)
 </p>
 
-c.Tree construction + Rendering engine and its use.
+3.<strong> Tree construction + Rendering engine and its use. </strong>
 
 <p>After Html gets loaded browser renders DOM tree. Then it appropriate styling will get processed to contruct CSSOM tree.Once DOM tree and CSSOM tree are ready render tree will get constructed, then browser will start painting elements in the UI.</p>
 
-d. Parsers (HTML, CSS, etc)
+4. <strong> Parsers (HTML, CSS, etc) </strong>
 
 <p>Parsing means reading HTML content and constructing DOM tree.</p>
 <p>HTML parse will parse markup into the parse tree,CSS parser will tokenize the markup into token to will parse it to CSS rules which will helpful to create CSSOM tree.
 
-e. Order of script processing
+5. <strong> Order of script processing </strong>
 
 <p> Browser will first go through the markup code line by line, then it will decide whether sync/async script can be loaded to optimize performance of loading website.</p>
 <p>Style sheets will be loaded async, without waiting of that DOM tree will get constructed </p>
 
-f.Layout and Painting
+6.<strong> Layout and Painting </strong>
 
 <p> DOM tree + CSSOM tree => Render tree </p>
 <p> Appropriate position, size will be computed by layout </p>
