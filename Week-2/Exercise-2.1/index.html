@@ -47,7 +47,7 @@
             amet..", comes from a line in section 1.10.32.</p>
         </article>
 
-        <form action="post">
+        <form action="" method="post" class="form">
             <label for="title">Title</label><br>
             <input type="radio" id="mr" name="title" value="Mr">
             <label for="mr">Mr</label>
@@ -55,24 +55,24 @@
             <label for="miss">Miss</label>
             <input type="radio" id="mrs" name="title" value="Mrs">
             <label for="mrs">Mrs</label>
-            <br>
+            <br><br>
             <label for="firstname">First Name</label><br>
-            <input type="text" name="firstname" id="firstname">
+            <input type="text" name="firstname" id="firstname" required>
             <br>
             <label for="lastname">Last Name</label><br>
-            <input type="text" name="lastname" id="lastname">
+            <input type="text" name="lastname" id="lastname" required>
             <br>
             <label for="email">Email</label><br>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" required>
             <br>
             <label for="phoneNo">Phone Number</label><br>
-            <input type="tel" name="phoneNo">
+            <input type="tel" name="phoneNo" required>
             <br>
             <label for="password">Password</label><br>
-            <input type="password" name="password" id="password">
+            <input type="password" name="password" id="password" required>
             <br>
             <label for="confirmpassword">Confirm your Password</label><br>
-            <input type="text" name="confirmPassword" id="confirmpassword">
+            <input type="password" name="confirmPassword" id="confirmPassword" required>
             <br>
             <label for="country">Country</label><br>
             <select id="country" name="country" class="form-control"><br>
@@ -82,10 +82,10 @@
             </select>
             <br><br>
 
-            <input id="checkbox" type="checkbox">
+            <input id="checkbox" type="checkbox" required>
             <label for="checkbox"> I agree to these <a href="#">Terms and Conditions</a></label><br><br>
 
-            <button type="submit">Sign up</button>
+            <input type="submit" value="Sign up" >
         </form>
     </main>
 </body>
