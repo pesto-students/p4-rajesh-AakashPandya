@@ -1,10 +1,14 @@
-const FormTodo = ({ addTodo }) => {
-  const [value, setValue] = React.useState("");
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import { useState } from "react";
+
+const FormTodo = ({ onCreateNewToDo }) => {
+  const [value, setValue] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!value) return;
-    addTodo(value);
+    onCreateNewToDo(value);
     setValue("");
   };
 
@@ -22,11 +26,12 @@ const FormTodo = ({ addTodo }) => {
           placeholder="Add new todo"
         />
       </Form.Group>
-      <Button variant="primary mb-3" type="submit">
+      <br />
+      <Button disabled={!value} variant="primary mb-3" type="submit">
         Submit
       </Button>
     </Form>
   );
 };
 
-export default FormToDo;
+export default FormTodo;
