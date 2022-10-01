@@ -11,9 +11,8 @@ const ToDoList = () => {
 
   const handleToDoToggleCompletion = (id) => {
     const newToDos = [...toDos];
-    newToDos.find((todo) => todo.id === id).isDone = !newToDos.find(
-      (todo) => todo.id === id
-    ).isDone;
+    const toDo = newToDos.find((todo) => todo.id === id);
+    toDo.isDone = !toDo.isDone;
     setToDos(newToDos);
   };
 
