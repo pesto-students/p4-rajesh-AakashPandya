@@ -43,6 +43,9 @@ const graph = createGraph(3, [
   [2, 0],
 ]);
 console.log(isPathExist(graph, 0, 2)); // true
+// Explanation: There are two paths from vertex 0 to vertex 2
+// - 0 → 1 → 2
+// - 0 → 2
 
 const graph1 = createGraph(6, [
   [0, 1],
@@ -52,3 +55,4 @@ const graph1 = createGraph(6, [
   [4, 3],
 ]);
 console.log(isPathExist(graph1, 0, 5)); // false
+// Explanation: There is no path from vertex 0 to vertex 5.
