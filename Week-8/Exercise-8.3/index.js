@@ -45,6 +45,7 @@ function levelOrder(root) {
 }
 
 const root1 = createTree([3, 9, 20, null, null, 15, 7]);
-console.log(levelOrder(root1));
+console.log(levelOrder(root1)); // [[3],[9,20],[15,7]]
+
 const root2 = createTree([1]);
-console.log(levelOrder(root2));
+console.log(levelOrder(root2)); // [[1]]
