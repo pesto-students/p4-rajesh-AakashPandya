@@ -3,6 +3,7 @@ import { Button, Grid, Typography } from '@mui/material'
 import { IURL } from 'interfaces/IURL'
 import TextField from '@mui/material/TextField'
 import URLList from 'components/URLList'
+import { isValidUrl } from 'helper'
 import urlService from 'services/urlService'
 import { useState } from 'react'
 
@@ -11,9 +12,11 @@ const Home = () => {
   const [urlList, setURLList] = useState<IURL[]>([])
 
   const handleOnShortenButtonClick = async () => {
-    const { data } = await urlService.shortenURL(currentURL)
-    setURLList((list: any) => [...list, data.result])
-    setCurrentURL('')
+    if (isValidUrl(currentURL)) {
+      const { data } = await urlService.shortenURL(currentURL)
+      setURLList((list: any) => [...list, data.result])
+      setCurrentURL('')
+    }
   }
 
   return (
@@ -51,7 +54,11 @@ const Home = () => {
             </Grid>
 
             <Grid item xs={3}>
-              <Button onClick={handleOnShortenButtonClick} variant="contained">
+              <Button
+                disabled={!isValidUrl(currentURL)}
+                onClick={handleOnShortenButtonClick}
+                variant="contained"
+              >
                 Shorten
               </Button>
             </Grid>
