@@ -17,7 +17,7 @@ import Typography from '@mui/material/Typography'
 const pages = ['Features', 'Pricing', 'Resources']
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
     null

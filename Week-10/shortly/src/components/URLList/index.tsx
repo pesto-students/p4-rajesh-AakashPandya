@@ -9,7 +9,7 @@ interface IURLProps {
   list: IURL[]
 }
 
-const URLList = ({ list }: IURLProps) => {
+const URLList: React.FC<IURLProps> = ({ list }: IURLProps) => {
   const handleCopyURL = useCallback(
     async (code: string) => {
       await copyToClipBoard(

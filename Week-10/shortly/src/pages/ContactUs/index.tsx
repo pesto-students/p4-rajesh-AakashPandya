@@ -1,5 +1,5 @@
-const ContactUs = () => {
-  return <>Contact US</>;
-};
+const ContactUs: React.FC = () => {
+  return <>Contact US</>
+}
 
-export default ContactUs;
+export default ContactUs

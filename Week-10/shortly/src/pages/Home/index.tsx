@@ -7,7 +7,7 @@ import { isValidUrl } from 'helper'
 import urlService from 'services/urlService'
 import { useState } from 'react'
 
-const Home = () => {
+const Home: React.FC = () => {
   const [currentURL, setCurrentURL] = useState('')
   const [urlList, setURLList] = useState<IURL[]>([])
 
