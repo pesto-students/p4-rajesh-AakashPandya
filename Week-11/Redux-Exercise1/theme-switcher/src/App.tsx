@@ -6,7 +6,7 @@ import { useTheme } from "app/hooks";
 
 function App() {
   const theme = useTheme();
-  const lightedness = theme === "dark" ? "dark" : "lit";
+  const lightedness = theme === "dark" ? "dark" : "light";
 
   return (
     <div className={`room ${lightedness}`}>
