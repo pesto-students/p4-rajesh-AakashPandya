@@ -18,7 +18,7 @@ const weatherApiURL = appendAppKey(apiURL);
 export const getCurrentCityWeather = async (req, res) => {
   const cityName = getQueryParam(req.url, "q");
 
-  if (!cityName) return badRequest(res, "city name is require query param");
+  if (!cityName) return badRequest(res, "city query param is required");
   const response = await fetch(`${weatherApiURL}&aqi=no&q=${cityName}`);
   const data = await response.json();
   ok(res, data);
