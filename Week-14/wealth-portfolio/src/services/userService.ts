@@ -16,9 +16,5 @@ export const createUser = async (userDTO: IUser) => {
 
 export const login = async (email: string, password: string) => {
   const user: any = await getUserByEmail(email);
-
-  if (user && (await user?.isPasswordMatch(password))) {
-    return true;
-  }
-  return false;
+  return user && (await user?.isPasswordMatch(password));
 };
