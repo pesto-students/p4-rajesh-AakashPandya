@@ -1,5 +1,7 @@
 import User, { IUser } from "../models/user";
 
+import { generateJWT } from "./tokenService";
+
 export const getUserByEmail = async (email: string) => {
   try {
     const response = await User.findOne({ email });
@@ -16,5 +18,8 @@ export const createUser = async (userDTO: IUser) => {
 
 export const login = async (email: string, password: string) => {
   const user: any = await getUserByEmail(email);
-  return user && (await user?.isPasswordMatch(password));
+  if (user && (await user?.isPasswordMatch(password))) {
+    return generateJWT(user._id);
+  }
+  return false;
 };
