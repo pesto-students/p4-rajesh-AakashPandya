@@ -1,5 +1,6 @@
 import authRoutes from "./routes/authRoutes";
 import config from "./config";
+import errorHandler from "./middleware/errorMiddleware";
 import express from "express";
 import financeRoutes from "./routes/financeRoutes";
 import mongoose from "mongoose";
@@ -26,3 +27,5 @@ mongoose
 app.use(morgan("dev"));
 app.use("/auth", authRoutes);
 app.use("/finance", financeRoutes);
+
+app.use(errorHandler);
