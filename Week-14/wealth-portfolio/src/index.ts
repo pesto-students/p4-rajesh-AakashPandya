@@ -1,8 +1,10 @@
 import authRoutes from "./routes/authRoutes";
 import config from "./config";
 import express from "express";
+import financeRoutes from "./routes/financeRoutes";
 import mongoose from "mongoose";
 import morgan from "morgan";
+
 const app = express();
 
 app.use(express.json());
@@ -23,3 +25,4 @@ mongoose
 
 app.use(morgan("dev"));
 app.use("/auth", authRoutes);
+app.use("/finance", financeRoutes);

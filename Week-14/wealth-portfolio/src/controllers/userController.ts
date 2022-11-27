@@ -1,8 +1,6 @@
 import { Request, Response } from "express";
 import { createUser, getUserByEmail, login } from "../services/userService";
 
-import User from "../models/user";
-
 export const signUp = async (request: Request, response: Response) => {
   const { firstName, lastName, email, password } = request.body;
   try {

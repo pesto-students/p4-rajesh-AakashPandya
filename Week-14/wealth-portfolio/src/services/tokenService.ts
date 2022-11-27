@@ -1,12 +1,11 @@
+import config from "../config";
 import jwt from "jsonwebtoken";
-import moment from "moment";
 
-export const generateJWT = (userId: string) => {
+export const generateAccessToken = (userId: string, mail: string) => {
   const payload = {
     sub: userId,
-    iat: 123,
-    exp: 41231,
+    mail,
   };
 
-  return jwt.sign(payload, "d");
+  return jwt.sign(payload, config?.jwt.accessTokenSecret, { expiresIn: "1hr" });
 };
